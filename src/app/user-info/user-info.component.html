@@ -4,6 +4,6 @@
     <input *ngIf="x.registered" type="checkbox" id="registered" name="registered" checked>
     <label *ngIf="x.registered" for="registered">registered</label>
     <input *ngIf="!x.registered" type="checkbox" id="notRegistered" name="notRegistered">
-    <label *ngIf="!x.registered" for="notRegistered">not registered</label>
+    <label *ngIf="!x.registered" for="notRegistered">not registered</label>&nbsp;
     <button (click)="deleteUser(x.id)">delete user</button>
 </div>

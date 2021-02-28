@@ -3,10 +3,10 @@
         no users...
     </div>
 
-    <button (click)="sortUsersByNameAscending()">sort names ascending</button>
-    <button (click)="sortUsersByNameDescending()">sort names descending</button>
-    <button (click)="sortRisksAscending()">sort risks ascending</button>
-    <button (click)="sortRisksDescending()">sort risks descending</button>
+    <button (click)="sortUsersByNameAscending()">sort names ascending</button>&nbsp;
+    <button (click)="sortUsersByNameDescending()">sort names descending</button>&nbsp;
+    <button (click)="sortRisksAscending()">sort risks ascending</button>&nbsp;
+    <button (click)="sortRisksDescending()">sort risks descending</button>&nbsp;
 
     total risks: {{ totalRisks || "n/a" }}
 
@@ -14,7 +14,7 @@
         <app-user-info (onUserDelete)="deleteUserFromList($event)" [x]="user"></app-user-info>
     </div>
 
-    <button (click)="addUser()">add user</button>
+    <button (click)="addUser()">add user</button>&nbsp;
     <button (click)="deleteUserFromList($event)">delete user</button>
 
     <app-user-detail [y]="selectedUser"></app-user-detail>
