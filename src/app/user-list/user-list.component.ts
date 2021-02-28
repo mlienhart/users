@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { USERS } from '../USERS';
+import { User } from '../User';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-user-list',
@@ -8,12 +9,18 @@ import { USERS } from '../USERS';
 })
 export class UserListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.getUsers();
   }
 
-  users = USERS;
+  users: User[] = [];
+
+  getUsers(): void {
+    this.userService.getUsers()
+      .subscribe(users => this.users = users);
+  }
 
   get totalRisks() {
     return this.users.map(x => x.risk).reduce((a, b) => a + b, 0);
