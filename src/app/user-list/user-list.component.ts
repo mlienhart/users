@@ -21,7 +21,7 @@ export class UserListComponent implements OnInit {
 
   addUser() {
     return this.users.push(
-      { id: this.users.length + 1, name: 'x', sex: 'male', risk: 20, card: 2, registered: true }
+      { id: this.users.length + 1, name: 'x', sex: 'male', risk: 20, card: 2, registered: true, points: [1, 2, 3] }
     );
   }
 

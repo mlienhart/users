@@ -5,4 +5,5 @@ export interface User {
     risk?: number | null;
     card?: number | null;
     registered?: boolean | null;
+    points?: any;
 }
