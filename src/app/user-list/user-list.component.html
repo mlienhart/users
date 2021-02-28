@@ -1,0 +1,21 @@
+<div class="y">
+    <div *ngIf="this.users.length === 0">
+        no users...
+    </div>
+
+    <button (click)="sortUsersByNameAscending()">sort name ascending</button>
+    <button (click)="sortUsersByNameDescending()">sort name descending</button>
+    <button (click)="sortRisksAscending()">sort risk ascending</button>
+    <button (click)="sortRisksDescending()">sort risk descending</button>
+
+    total risks: {{ totalRisks || "n/a" }}
+
+    <div *ngFor="let user of users" (click)="onSelect(user)">
+        <app-user-info (onUserDelete)="deleteUserFromList($event)" [x]="user"></app-user-info>
+    </div>
+
+    <button (click)="addUser()">add user</button>
+    <button (click)="deleteUserFromList($event)">delete user</button>
+
+    <app-user-detail [y]="selectedUser"></app-user-detail>
+</div>
