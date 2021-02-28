@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'users';
+
+  get nameOfApp()  {
+    return this.title.toUpperCase();
+  }
 }
