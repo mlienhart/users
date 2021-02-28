@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { User } from '../User';
+import { Card } from 'src/app/enums/card';
+import { User } from '../../interfaces/user';
 
 @Component({
   selector: 'app-user-detail',
@@ -11,6 +12,10 @@ export class UserDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  cardName() {
+    return Card[this.y.card].toLocaleLowerCase();
   }
 
 }

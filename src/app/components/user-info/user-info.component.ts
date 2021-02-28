@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Card } from '../Card';
-import { User } from '../User';
+import { Card } from '../../enums/card';
+import { User } from '../../interfaces/user';
 
 @Component({
   selector: 'app-user-info',

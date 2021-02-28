@@ -1,4 +1,4 @@
-import { User } from "./User";
+import { User } from "./interfaces/user";
 
 export const USERS: User[] = [
     { id: 1, name: 'a', birthday: '1945-11-28T09:36:25Z', sex: 'male', risk: 10, card: 0, registered: true, points: [1, 2, 3] },
