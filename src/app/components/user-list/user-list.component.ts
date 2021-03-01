@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../interfaces/user';
 import { UserService } from '../../services/user.service';
 
+const EMPTY: string = "no risks available...";
+
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -23,7 +25,8 @@ export class UserListComponent implements OnInit {
   }
 
   get totalRisks() {
-    return this.users.map(x => x.risk).reduce((a, b) => a + b, 0);
+    let a = this.users.map(x => x.risk).reduce((a, b) => a + b, 0);
+    return a === 0 ? EMPTY : (Math.round(a * 100) / 100).toFixed(2);
   }
 
   addUser() {

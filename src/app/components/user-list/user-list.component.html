@@ -8,7 +8,7 @@
     <button (click)="sortRisksAscending()">sort risks ascending</button>&nbsp;
     <button (click)="sortRisksDescending()">sort risks descending</button>&nbsp;
 
-    total risks: {{ totalRisks || "n/a" }}
+    total risks: {{ totalRisks }}
 
     <div *ngFor="let user of users" (click)="onSelect(user)">
         <app-user-info (onUserDelete)="deleteUserFromList($event)" [x]="user"></app-user-info>
