@@ -24,4 +24,8 @@ export class UserInfoComponent implements OnInit {
     return Card[this.x.card].toLocaleLowerCase();
   }
 
+  get riskValue() {
+    return (Math.round(this.x.risk * 100) / 100).toFixed(2);
+  }
+
 }

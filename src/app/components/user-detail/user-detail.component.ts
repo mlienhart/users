@@ -14,6 +14,10 @@ export class UserDetailComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get riskValue() {
+    return (Math.round(this.y.risk * 100) / 100).toFixed(2);
+  }
+
   cardName() {
     return Card[this.y.card].toLocaleLowerCase();
   }
