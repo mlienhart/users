@@ -1,7 +1,15 @@
 .y {
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 button {
     cursor: pointer;
+}
+
+mat-progress-bar {
+    width: 150px;
+    height: 8px;
 }
