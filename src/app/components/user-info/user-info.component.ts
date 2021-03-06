@@ -28,4 +28,18 @@ export class UserInfoComponent implements OnInit {
     return (Math.round(this.x.risk * 100) / 100).toFixed(2);
   }
 
+  getRiskColorClass(value: number): string {
+    if (value <= 25) {
+      return "green";
+    }
+    if (value <= 75) {
+      return "orange";
+    }
+    if (value <= 100) {
+      return "red";
+    }
+
+    return "silver";
+  }
+
 }
