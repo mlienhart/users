@@ -18,6 +18,10 @@ export class UserDetailComponent implements OnInit {
     return (Math.round(this.y.risk * 100) / 100).toFixed(2);
   }
 
+  get summedPoints() {
+    return this.y.points.flat(Infinity).reduce((a: any, b: any) => a + b, 0);
+  }
+
   cardName() {
     return Card[this.y.card].toLocaleLowerCase();
   }
