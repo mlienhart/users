@@ -5,5 +5,5 @@
     <label *ngIf="x.registered" for="registered">registered</label>
     <input *ngIf="!x.registered" type="checkbox" id="notRegistered" name="notRegistered">
     <label *ngIf="!x.registered" for="notRegistered">not registered</label>&nbsp;
-    <button (click)="deleteUser(x.id)">delete user</button>
+    <button mat-stroked-button color="warn" (click)="deleteUser(x.id)">delete user</button>
 </div>

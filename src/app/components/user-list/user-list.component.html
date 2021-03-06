@@ -3,19 +3,20 @@
         no users...
     </div>
 
-    <button (click)="sortUsersByNameAscending()">sort names ascending</button>&nbsp;
-    <button (click)="sortUsersByNameDescending()">sort names descending</button>&nbsp;
-    <button (click)="sortRisksAscending()">sort risks ascending</button>&nbsp;
-    <button (click)="sortRisksDescending()">sort risks descending</button>&nbsp;
-
-    total risks: {{ totalRisks }}
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle (click)="sortUsersByNameAscending()">sort names ascending</mat-button-toggle>
+        <mat-button-toggle (click)="sortUsersByNameDescending()">sort names descending</mat-button-toggle>
+        <mat-button-toggle (click)="sortRisksAscending()">sort risks ascending</mat-button-toggle>
+        <mat-button-toggle (click)="sortRisksDescending()">sort risks descending</mat-button-toggle>
+    </mat-button-toggle-group>
+    <mat-card>total risks: {{ totalRisks }}</mat-card>
 
     <div *ngFor="let user of users" (click)="onSelect(user)">
         <app-user-info (onUserDelete)="deleteUserFromList($event)" [x]="user"></app-user-info>
     </div>
 
-    <button (click)="addUser()">add user</button>&nbsp;
-    <button (click)="deleteUserFromList($event)">delete user</button>
+    <button mat-stroked-button color="primary" (click)="addUser()">add user</button>&nbsp;
+    <button mat-stroked-button color="warn" (click)="deleteUserFromList($event)">delete user</button>
 
     <app-user-detail [y]="selectedUser"></app-user-detail>
 </div>
