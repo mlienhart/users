@@ -1,10 +1,31 @@
 <mat-card *ngIf="y">
-    <div>user id: {{ y.id }}</div>
-    <div>user name: <input [(ngModel)]="y.name" /></div>
-    <div>user birthday: {{ y.birthday | date }}</div>
-    <div>user sex: {{ y.sex }}</div>
-    <div>user risk: {{ riskValue }}</div>
-    <div>user card: {{ cardName() }}</div>
-    <div>user registered: {{ y.registered }}</div>
-    <div>user points: {{ summedPoints }}</div>
+    <div class="b">
+        <span class="material-icons">
+            face
+        </span>
+        <span class="a">{{ userTitle }}</span>
+    </div>
+    <div class="row">
+        <mat-divider></mat-divider>
+        <div class="column">
+            <p>user id:</p>
+            <p>user name:</p>
+            <p>user birthday:</p>
+            <p>user sex:</p>
+            <p>user risk:</p>
+            <p>user card:</p>
+            <p>user registered:</p>
+            <p>user points:</p>
+        </div>
+        <div class="column">
+            <p>{{ y.id }}</p>
+            <p><input [(ngModel)]="y.name" /></p>
+            <p>{{ y.birthday | date }}</p>
+            <p>{{ y.sex }}</p>
+            <p>{{ riskValue }}</p>
+            <p>{{ cardName() }}</p>
+            <p>{{ y.registered }}</p>
+            <p>{{ summedPoints }}</p>
+        </div>
+    </div>
 </mat-card>

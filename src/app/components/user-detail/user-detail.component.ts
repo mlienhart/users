@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Card } from 'src/app/enums/card';
 import { User } from '../../interfaces/user';
 
+const TITLE: string = "user detail";
+
 @Component({
   selector: 'app-user-detail',
   templateUrl: './user-detail.component.html',
@@ -20,6 +22,10 @@ export class UserDetailComponent implements OnInit {
 
   get summedPoints() {
     return this.y.points.flat(Infinity).reduce((a: any, b: any) => a + b, 0);
+  }
+
+  get userTitle() {
+    return TITLE.toUpperCase();
   }
 
   cardName() {
