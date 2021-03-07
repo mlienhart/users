@@ -5,27 +5,47 @@
         </span>
         <span class="a">{{ userTitle }}</span>
     </div>
-    <div class="row">
-        <mat-divider></mat-divider>
-        <div class="column">
-            <p>user id:</p>
-            <p>user name:</p>
-            <p>user birthday:</p>
-            <p>user sex:</p>
-            <p>user risk:</p>
-            <p>user card:</p>
-            <p>user registered:</p>
-            <p>user points:</p>
-        </div>
-        <div class="column">
-            <p>{{ y.id }}</p>
-            <p><input [(ngModel)]="y.name" /></p>
-            <p>{{ y.birthday | date }}</p>
-            <p>{{ y.sex }}</p>
-            <p>{{ riskValue }}</p>
-            <p>{{ cardName() }}</p>
-            <p>{{ y.registered }}</p>
-            <p>{{ summedPoints }}</p>
-        </div>
-    </div>
+    <mat-divider></mat-divider>
+    <mat-tab-group mat-align-tabs="start" animationDuration="0ms">
+        <mat-tab label="Personal Info">
+            <div class="row">
+                <div class="column">
+                    <p>user id:</p>
+                    <p>user name:</p>
+                    <p>user birthday:</p>
+                    <p>user sex:</p>
+                </div>
+                <div class="column">
+                    <p>{{ y.id }}</p>
+                    <p><input [(ngModel)]="y.name" /></p>
+                    <p>{{ y.birthday | date }}</p>
+                    <p>{{ y.sex }}</p>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Risk info">
+            <div class="row">
+                <div class="column">
+                    <p>user risk:</p>
+                    <p>user card:</p>
+                    <p>user registered:</p>
+                </div>
+                <div class="column">
+                    <p>{{ riskValue }}</p>
+                    <p>{{ cardName() }}</p>
+                    <p>{{ y.registered }}</p>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Points">
+            <div class="row">
+                <div class="column">
+                    <p>user points:</p>
+                </div>
+                <div class="column">
+                    <p>{{ summedPoints }}</p>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
 </mat-card>
