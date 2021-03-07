@@ -17,7 +17,13 @@
     n/a
 </div>
 
-<button mat-stroked-button color="primary" (click)="addUser()">add user</button>&nbsp;
-<button mat-stroked-button color="warn" (click)="deleteUserFromList($event)">delete user</button>
+<button mat-stroked-button color="primary" (click)="addUser()">
+    <span class="material-icons">
+        create
+    </span>add user</button>&nbsp;
+<button mat-stroked-button color="warn" (click)="deleteUserFromList($event)">
+    <span class="material-icons">
+        delete
+    </span>delete user</button>
 
 <app-user-detail [y]="selectedUser"></app-user-detail>&nbsp;
