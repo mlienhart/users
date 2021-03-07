@@ -1,24 +1,23 @@
-<div>
-    <div *ngIf="this.users.length === 0">
-        no users...
-    </div>
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle (click)="sortUsersByNameAscending()">sort names ascending</mat-button-toggle>
+    <mat-button-toggle (click)="sortUsersByNameDescending()">sort names descending</mat-button-toggle>
+    <mat-button-toggle (click)="sortRisksAscending()">sort risks ascending</mat-button-toggle>
+    <mat-button-toggle (click)="sortRisksDescending()">sort risks descending</mat-button-toggle>
+</mat-button-toggle-group>
 
-    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-        <mat-button-toggle (click)="sortUsersByNameAscending()">sort names ascending</mat-button-toggle>
-        <mat-button-toggle (click)="sortUsersByNameDescending()">sort names descending</mat-button-toggle>
-        <mat-button-toggle (click)="sortRisksAscending()">sort risks ascending</mat-button-toggle>
-        <mat-button-toggle (click)="sortRisksDescending()">sort risks descending</mat-button-toggle>
-    </mat-button-toggle-group>
-    <mat-card>total risks: {{ totalRisks }}</mat-card>
+<app-user-calculations [z]="users"></app-user-calculations>
 
-    <mat-selection-list [multiple]="false">
-        <mat-list-option *ngFor="let user of users" (click)="onSelect(user)">
-            <app-user-info (onUserDelete)="deleteUserFromList($event)" [x]="user"></app-user-info>
-        </mat-list-option>
-    </mat-selection-list>
+<mat-selection-list [multiple]="false">
+    <mat-list-option *ngFor="let user of users" (click)="onSelect(user)">
+        <app-user-info (onUserDelete)="deleteUserFromList($event)" [x]="user"></app-user-info>
+    </mat-list-option>
+</mat-selection-list>
 
-    <button mat-stroked-button color="primary" (click)="addUser()">add user</button>&nbsp;
-    <button mat-stroked-button color="warn" (click)="deleteUserFromList($event)">delete user</button>
-
-    <app-user-detail [y]="selectedUser"></app-user-detail>
+<div *ngIf="this.users.length === 0">
+    n/a
 </div>
+
+<button mat-stroked-button color="primary" (click)="addUser()">add user</button>&nbsp;
+<button mat-stroked-button color="warn" (click)="deleteUserFromList($event)">delete user</button>
+
+<app-user-detail [y]="selectedUser"></app-user-detail>

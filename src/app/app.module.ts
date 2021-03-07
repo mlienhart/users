@@ -51,12 +51,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { UserCalculationsComponent } from './components/user-calculations/user-calculations.component';
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserInfoComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    UserCalculationsComponent
   ],
   exports: [
     A11yModule,
