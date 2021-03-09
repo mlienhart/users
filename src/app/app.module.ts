@@ -54,6 +54,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { UserCalculationsComponent } from './components/user-calculations/user-calculations.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { UserTestComponent } from './components/user-test/user-test.component';
+import { UserReportComponent } from './components/user-report/user-report.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +63,8 @@ import { UserTestComponent } from './components/user-test/user-test.component';
     UserDetailComponent,
     UserCalculationsComponent,
     SidenavComponent,
-    UserTestComponent
+    UserTestComponent,
+    UserReportComponent
   ],
   exports: [
     A11yModule,

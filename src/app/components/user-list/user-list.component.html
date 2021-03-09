@@ -5,8 +5,6 @@
     <mat-button-toggle (click)="sortRisksDescending()">sort risks descending</mat-button-toggle>
 </mat-button-toggle-group>
 
-<app-user-calculations [z]="users"></app-user-calculations>
-
 <mat-selection-list [multiple]="false">
     <mat-list-option *ngFor="let user of users" (click)="onSelect(user)">
         <app-user-info (onUserDelete)="deleteUserFromList($event)" [x]="user"></app-user-info>
