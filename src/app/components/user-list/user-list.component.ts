@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../interfaces/user';
 import { UserService } from '../../services/user.service';
 
-const EMPTY_MESSAGE: string = "n/a";
-
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',

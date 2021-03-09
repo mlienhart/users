@@ -52,13 +52,17 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { UserCalculationsComponent } from './components/user-calculations/user-calculations.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { UserTestComponent } from './components/user-test/user-test.component';
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserInfoComponent,
     UserDetailComponent,
-    UserCalculationsComponent
+    UserCalculationsComponent,
+    SidenavComponent,
+    UserTestComponent
   ],
   exports: [
     A11yModule,
