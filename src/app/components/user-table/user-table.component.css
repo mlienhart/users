@@ -6,3 +6,8 @@ table {
   font-size: 14px;
   width: 100%;
 }
+
+.mat-row:hover {
+  background-color: #e3f2fd;
+  cursor: pointer;
+}
