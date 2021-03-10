@@ -55,6 +55,8 @@ import { UserCalculationsComponent } from './components/user-calculations/user-c
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { UserTestComponent } from './components/user-test/user-test.component';
 import { UserReportComponent } from './components/user-report/user-report.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { StartPageComponent } from './components/start-page/start-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +66,9 @@ import { UserReportComponent } from './components/user-report/user-report.compon
     UserCalculationsComponent,
     SidenavComponent,
     UserTestComponent,
-    UserReportComponent
+    UserReportComponent,
+    NotFoundComponent,
+    StartPageComponent
   ],
   exports: [
     A11yModule,
