@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'app-start-page' },
   { path: 'app-start-page', component: StartPageComponent },
   {
-    path: 'simple-routing', children: [
+    path: 'routing', children: [
       { path: 'app-user-list', component: UserListComponent },
       { path: 'app-user-report', component: UserReportComponent },
       { path: 'app-user-test', component: UserTestComponent }
