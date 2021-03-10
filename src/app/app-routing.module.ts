@@ -4,6 +4,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { StartPageComponent } from './components/start-page/start-page.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserReportComponent } from './components/user-report/user-report.component';
+import { UserTableComponent } from './components/user-table/user-table.component';
 import { UserTestComponent } from './components/user-test/user-test.component';
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
     path: 'routing', children: [
       { path: 'app-user-list', component: UserListComponent },
       { path: 'app-user-report', component: UserReportComponent },
+      { path: 'app-user-table', component: UserTableComponent },
       { path: 'app-user-test', component: UserTestComponent }
     ]
   },

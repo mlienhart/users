@@ -57,6 +57,7 @@ import { UserTestComponent } from './components/user-test/user-test.component';
 import { UserReportComponent } from './components/user-report/user-report.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { StartPageComponent } from './components/start-page/start-page.component';
+import { UserTableComponent } from './components/user-table/user-table.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +69,8 @@ import { StartPageComponent } from './components/start-page/start-page.component
     UserTestComponent,
     UserReportComponent,
     NotFoundComponent,
-    StartPageComponent
+    StartPageComponent,
+    UserTableComponent
   ],
   exports: [
     A11yModule,
