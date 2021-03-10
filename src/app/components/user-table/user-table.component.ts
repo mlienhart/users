@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -12,27 +12,19 @@ import { USERS } from 'src/app/USERS';
   styleUrls: ['./user-table.component.css']
 })
 export class UserTableComponent implements AfterViewInit {
-  dataSource: MatTableDataSource<User>;
+  constructor(private userService: UserService) {
+    this.dataSource = new MatTableDataSource(USERS);
+  }
 
+  dataSource: MatTableDataSource<User>;
+  displayedColumns: string[] = ['id', 'name', 'birthday', 'sex', 'risk', 'card', 'registered', 'points'];
+  users: User[] = [];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
   ngOnInit(): void {
     this.getUsers();
   }
-
-  constructor(private userService: UserService) {
-    this.dataSource = new MatTableDataSource(USERS);
-  }
-
-  users: User[] = [];
-
-  getUsers(): void {
-    this.userService.getUsers()
-      .subscribe(users => this.users = users);
-  }
-
-  displayedColumns: string[] = ['id', 'name', 'birthday', 'sex', 'risk', 'card', 'registered', 'points'];
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -47,4 +39,10 @@ export class UserTableComponent implements AfterViewInit {
       this.dataSource.paginator.firstPage();
     }
   }
+
+  getUsers(): void {
+    this.userService.getUsers()
+      .subscribe(users => this.users = users);
+  }
+
 }
