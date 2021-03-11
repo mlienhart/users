@@ -5,7 +5,47 @@ import { MatTableDataSource } from '@angular/material/table';
 import { User } from 'src/app/interfaces/user';
 import { UserService } from 'src/app/services/user.service';
 import { USERS } from 'src/app/USERS';
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { Column } from 'src/app/interfaces/column';
+
+function defineColumn<T extends Column>(column: T): T {
+  return column;
+}
+
+const COLUMNS = [
+  defineColumn({
+    name: 'id' as const,
+    title: "Id",
+  }),
+  defineColumn({
+    name: 'name' as const,
+    title: 'Name',
+  }),
+  defineColumn({
+    name: 'birthday' as const,
+    title: 'Birthday',
+  }),
+  defineColumn({
+    name: 'sex' as const,
+    title: 'Sex',
+  }),
+  defineColumn({
+    name: 'risk' as const,
+    title: 'Risk',
+  }),
+  defineColumn({
+    name: 'card' as const,
+    title: 'Card',
+  }),
+  defineColumn({
+    name: 'registered' as const,
+    title: 'Registered',
+  }),
+  defineColumn({
+    name: 'points' as const,
+    title: 'Points',
+  })
+];
 
 @Component({
   selector: 'app-user-table',
