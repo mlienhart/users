@@ -4,5 +4,11 @@ export enum Card {
     Blue,
     Silver,
     Gold,
-    Platinum
+    Platinum,
+    Black,
+    Yellow,
+    Pink,
+    Beige,
+    Gray,
+    Purple
 }
