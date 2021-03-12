@@ -58,6 +58,9 @@ import { UserReportComponent } from './components/user-report/user-report.compon
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { StartPageComponent } from './components/start-page/start-page.component';
 import { UserTableComponent } from './components/user-table/user-table.component';
+import { UserChartsComponent } from './components/user-charts/user-charts.component';
+import { ChartsModule } from 'ng2-charts';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,7 +73,8 @@ import { UserTableComponent } from './components/user-table/user-table.component
     UserReportComponent,
     NotFoundComponent,
     StartPageComponent,
-    UserTableComponent
+    UserTableComponent,
+    UserChartsComponent
   ],
   exports: [
     A11yModule,
@@ -166,7 +170,8 @@ import { UserTableComponent } from './components/user-table/user-table.component
     MatTreeModule,
     OverlayModule,
     PortalModule,
-    ScrollingModule
+    ScrollingModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

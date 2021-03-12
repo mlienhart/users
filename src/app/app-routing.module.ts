@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { StartPageComponent } from './components/start-page/start-page.component';
+import { UserChartsComponent } from './components/user-charts/user-charts.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserReportComponent } from './components/user-report/user-report.component';
 import { UserTableComponent } from './components/user-table/user-table.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
       { path: 'app-user-list', component: UserListComponent },
       { path: 'app-user-report', component: UserReportComponent },
       { path: 'app-user-table', component: UserTableComponent },
-      { path: 'app-user-test', component: UserTestComponent }
+      { path: 'app-user-test', component: UserTestComponent },
+      { path: 'app-user-charts', component: UserChartsComponent }
     ]
   },
   { path: '**', component: NotFoundComponent }

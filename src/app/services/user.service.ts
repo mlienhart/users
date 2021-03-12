@@ -7,7 +7,6 @@ import { USERS } from '../USERS';
   providedIn: 'root'
 })
 export class UserService {
-
   constructor() { }
 
   getUsers(): Observable<User[]> {
