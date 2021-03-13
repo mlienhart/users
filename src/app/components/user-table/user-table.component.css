@@ -51,3 +51,7 @@ tr.element-row:not(.expanded-row):active {
   font-size: 14px;
   width: 100%;
 }
+
+button {
+  margin: 10px 10px 0 10px;
+}

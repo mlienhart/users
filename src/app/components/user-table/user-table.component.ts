@@ -29,11 +29,14 @@ export class UserTableComponent implements AfterViewInit {
   displayedColumns: string[] = ['id', 'name', 'birthday', 'sex', 'risk', 'card', 'registered', 'points'];
   users: User[] = [];
   expandedElement: any;
+  title = 'export';
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
   ngOnInit(): void {
     this.getUsers();
+    this.dataSource = new MatTableDataSource<User>(USERS);
+    this.dataSource.paginator = this.paginator;
   }
 
   ngAfterViewInit() {

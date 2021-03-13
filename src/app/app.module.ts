@@ -61,6 +61,7 @@ import { UserTableComponent } from './components/user-table/user-table.component
 import { ChartsModule } from 'ng2-charts';
 import { LineChartComponent } from './components/user-charts/line-chart/line-chart.component';
 import { BarChartComponent } from './components/user-charts/bar-chart/bar-chart.component';
+import { MatTableExporterModule } from 'mat-table-exporter';
 
 @NgModule({
   declarations: [
@@ -173,7 +174,8 @@ import { BarChartComponent } from './components/user-charts/bar-chart/bar-chart.
     OverlayModule,
     PortalModule,
     ScrollingModule,
-    ChartsModule
+    ChartsModule,
+    MatTableExporterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
