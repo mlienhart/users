@@ -4,14 +4,15 @@ import { Label } from "ng2-charts";
 import { USERS } from 'src/app/USERS';
 
 @Component({
-  selector: 'app-user-charts',
-  templateUrl: './user-charts.component.html',
-  styleUrls: ['./user-charts.component.css']
+  selector: 'app-line-chart',
+  templateUrl: './line-chart.component.html',
+  styleUrls: ['./line-chart.component.css']
 })
-export class UserChartsComponent implements OnInit {
+export class LineChartComponent implements OnInit {
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
   public barChartOptions: ChartOptions = {
@@ -28,4 +29,5 @@ export class UserChartsComponent implements OnInit {
     { data: USERS.map(x => x.risk), label: "user risk" },
     { data: USERS.map(x => x.id), label: "user id" }
   ];
+
 }

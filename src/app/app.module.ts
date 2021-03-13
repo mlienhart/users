@@ -58,8 +58,9 @@ import { UserReportComponent } from './components/user-report/user-report.compon
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { StartPageComponent } from './components/start-page/start-page.component';
 import { UserTableComponent } from './components/user-table/user-table.component';
-import { UserChartsComponent } from './components/user-charts/user-charts.component';
 import { ChartsModule } from 'ng2-charts';
+import { LineChartComponent } from './components/user-charts/line-chart/line-chart.component';
+import { BarChartComponent } from './components/user-charts/bar-chart/bar-chart.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { ChartsModule } from 'ng2-charts';
     NotFoundComponent,
     StartPageComponent,
     UserTableComponent,
-    UserChartsComponent
+    LineChartComponent,
+    BarChartComponent
   ],
   exports: [
     A11yModule,
