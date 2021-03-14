@@ -35,7 +35,7 @@ export class UserListComponent implements OnInit {
 
   selectedUser: any;
 
-  onSelect(value: any): void {
+  onUserSelect(value: any): void {
     this.selectedUser = value;
   }
 

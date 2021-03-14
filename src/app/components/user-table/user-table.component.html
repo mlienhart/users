@@ -1,4 +1,5 @@
 <div>
+    <span class="e">Export to:</span>
     <button mat-raised-button color="primary"
         (click)="exporter.exportTable('xlsx', {fileName:'export', sheet: 'export', Props: {Author: 'User'}})">Excel</button>
     <button mat-raised-button color="primary" (click)="exporter.exportTable('csv')">Csv</button>

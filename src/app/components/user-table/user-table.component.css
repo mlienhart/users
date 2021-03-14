@@ -53,5 +53,9 @@ tr.element-row:not(.expanded-row):active {
 }
 
 button {
-  margin: 10px 10px 0 10px;
+  margin: 5px;
+}
+
+.e { 
+  margin-left: 5px;
 }
