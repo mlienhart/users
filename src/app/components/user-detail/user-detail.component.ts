@@ -24,6 +24,10 @@ export class UserDetailComponent implements OnInit {
     return this.y.points.flat(Infinity).reduce((a: any, b: any) => a + b, 0);
   }
 
+  get points() {
+    return this.y.points.flat(Infinity).join(', ');
+  }
+
   get userTitle() {
     return TITLE.toUpperCase();
   }
