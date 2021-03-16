@@ -62,6 +62,7 @@ import { ChartsModule } from 'ng2-charts';
 import { LineChartComponent } from './components/user-charts/line-chart/line-chart.component';
 import { BarChartComponent } from './components/user-charts/bar-chart/bar-chart.component';
 import { MatTableExporterModule } from 'mat-table-exporter';
+import { AdvancedInfoComponent } from './components/advanced-info/advanced-info.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { MatTableExporterModule } from 'mat-table-exporter';
     StartPageComponent,
     UserTableComponent,
     LineChartComponent,
-    BarChartComponent
+    BarChartComponent,
+    AdvancedInfoComponent
   ],
   exports: [
     A11yModule,
