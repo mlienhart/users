@@ -13,6 +13,8 @@ export class UserDetailComponent implements OnInit {
   @Input() y: User;
   constructor() { }
 
+  infoMessage: string = "Input field accepts only numbers, spaces and commas.";
+
   ngOnInit(): void {
   }
 
