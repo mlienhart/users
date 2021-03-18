@@ -63,6 +63,7 @@ import { LineChartComponent } from './components/user-charts/line-chart/line-cha
 import { BarChartComponent } from './components/user-charts/bar-chart/bar-chart.component';
 import { MatTableExporterModule } from 'mat-table-exporter';
 import { AdvancedInfoComponent } from './components/advanced-info/advanced-info.component';
+import { ListNumbersDirective } from './directives/list-numbers.directive';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { AdvancedInfoComponent } from './components/advanced-info/advanced-info.
     UserTableComponent,
     LineChartComponent,
     BarChartComponent,
-    AdvancedInfoComponent
+    AdvancedInfoComponent,
+    ListNumbersDirective
   ],
   exports: [
     A11yModule,
