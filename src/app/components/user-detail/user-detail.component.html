@@ -11,12 +11,14 @@
             <div class="row">
                 <div class="column">
                     <p>user id:</p>
+                    <p>historical ids:</p>
                     <p>user name:</p>
                     <p>user birthday:</p>
                     <p>user sex:</p>
                 </div>
                 <div class="column">
                     <p>{{ y.id }}</p>
+                    <p><input [(ngModel)]="y.historicalIds" /></p>
                     <p><input [(ngModel)]="y.name" /></p>
                     <p>{{ y.birthday | date }}</p>
                     <p>{{ y.sex }}</p>

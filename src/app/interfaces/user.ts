@@ -1,5 +1,6 @@
 export interface User {
     id?: number | null;
+    historicalIds?: string | null;
     name?: string | null;
     birthday?: string | null;
     sex?: string | null;
