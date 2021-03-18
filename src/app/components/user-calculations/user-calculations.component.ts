@@ -11,6 +11,8 @@ export class UserCalculationsComponent implements OnInit {
   @Input() z: any;
   constructor() { }
 
+  isSlideToggleOn: boolean = false;
+
   ngOnInit(): void {
   }
 

@@ -1,1 +1,10 @@
-<mat-card>total risks: {{ totalRisks }}, total points: {{ totalPoints }}</mat-card>
+<mat-card>
+    <mat-slide-toggle color="primary" [(ngModel)]="isSlideToggleOn">
+        <div *ngIf="!isSlideToggleOn">Show more</div>
+        <div *ngIf="isSlideToggleOn">Show less</div>
+    </mat-slide-toggle>
+    <div>total risks: {{ totalRisks }}</div>
+    <div *ngIf="isSlideToggleOn">
+        <div>total points: {{ totalPoints }}</div>
+    </div>
+</mat-card>
