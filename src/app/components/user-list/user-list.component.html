@@ -1,4 +1,4 @@
-<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+<mat-button-toggle-group *ngIf="this.users.length > 1" name="fontStyle" aria-label="Font Style">
     <mat-button-toggle (click)="sortUsersByNameAscending()">sort names ascending</mat-button-toggle>
     <mat-button-toggle (click)="sortUsersByNameDescending()">sort names descending</mat-button-toggle>
     <mat-button-toggle (click)="sortRisksAscending()">sort risks ascending</mat-button-toggle>
@@ -11,17 +11,17 @@
     </mat-list-option>
 </mat-selection-list>
 
-<div *ngIf="this.users.length === 0">
-    n/a
+<div class="a" *ngIf="this.users.length === 0">
+    {{ message }}
 </div>
 
 <button mat-stroked-button color="primary" (click)="addUser()">
     <span class="material-icons">
         create
     </span>add user</button>&nbsp;
-<button mat-stroked-button color="warn" (click)="deleteUserFromList($event)">
+<button *ngIf="this.users.length !== 0" mat-stroked-button color="warn" (click)="deleteUserFromList($event)">
     <span class="material-icons">
         delete
     </span>delete user</button>
 
-<app-user-detail [y]="selectedUser"></app-user-detail>&nbsp;
+<app-user-detail *ngIf="this.users.length !== 0" [y]="selectedUser"></app-user-detail>&nbsp;

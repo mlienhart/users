@@ -2,3 +2,10 @@ button {
     cursor: pointer;
     margin: 8px;
 }
+
+.a {
+    display: flex;
+    justify-content: center;
+    color: #616161;
+    font-size: 22px;
+}

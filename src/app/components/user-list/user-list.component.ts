@@ -16,6 +16,7 @@ export class UserListComponent implements OnInit {
   }
 
   users: User[] = [];
+  message: string = "User list is empty. You can add some users...";
 
   getUsers(): void {
     this.userService.getUsers()
