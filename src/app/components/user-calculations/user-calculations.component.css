@@ -1,0 +1,15 @@
+mat-card {
+    margin: 20px;
+}
+
+.a {
+    color: rgba(0,0,0,.54);
+    margin-left: 6px;
+}
+
+.b {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 13px;
+}

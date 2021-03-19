@@ -8,5 +8,7 @@ export interface User {
     card?: number | null;
     registered?: boolean | null;
     points?: any;
-    references?: number;
+    references?: number | null;
+    failedLoginAttempts?: number | null;
+    successfulLoginAttempts?: number | null;
 }
