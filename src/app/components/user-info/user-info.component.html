@@ -2,10 +2,7 @@
     id: {{ x.id }}, name: {{ x.name }}, card: {{ cardName() }}, risk: {{ riskValue }}
     <mat-progress-bar [class]="getRiskColorClass(x.risk)" mode="determinate" max="100" value="{{ x.risk }}"
         matTooltip="risk: {{ riskValue }}"></mat-progress-bar>
-    <input *ngIf="x.registered" type="checkbox" id="registered" name="registered" checked>
-    <label *ngIf="x.registered" for="registered">registered</label>
-    <input *ngIf="!x.registered" type="checkbox" id="notRegistered" name="notRegistered">
-    <label *ngIf="!x.registered" for="notRegistered">not registered</label>&nbsp;
+    <mat-checkbox color="primary" [(ngModel)]="x.registered" [disabled]="false">Registered</mat-checkbox>
     <button mat-stroked-button color="warn" (click)="deleteUser(x.id)">
         <span class="material-icons">
             delete
