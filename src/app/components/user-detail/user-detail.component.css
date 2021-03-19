@@ -1,5 +1,4 @@
 mat-card {
-    max-width: 500px;
     margin: 8px;
     display: flex;
     flex-direction: column;
@@ -11,7 +10,7 @@ input {
 
 .column {
     float: left;
-    width: 28%;
+    width: 14%;
     padding: 10px;
 }
 
