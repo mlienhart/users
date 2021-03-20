@@ -10,6 +10,7 @@ import { UserTableComponent } from './components/user-table/user-table.component
 import { UserTestComponent } from './components/user-test/user-test.component';
 import { ListChartComponent } from './components/user-charts/list-chart/list-chart.component';
 import { PieChartComponent } from './components/user-charts/pie-chart/pie-chart.component';
+import { RadarChartComponent } from './components/user-charts/radar-chart/radar-chart.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'app-start-page' },
@@ -23,6 +24,7 @@ const routes: Routes = [
       { path: 'app-line-chart', component: LineChartComponent },
       { path: 'app-bar-chart', component: BarChartComponent },
       { path: 'app-pie-chart', component: PieChartComponent },
+      { path: 'app-radar-chart', component: RadarChartComponent },
       { path: 'app-list-chart', component: ListChartComponent }
     ]
   },

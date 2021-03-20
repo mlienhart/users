@@ -1,0 +1,11 @@
+.a {
+    min-width: 500px;
+}
+
+.x {
+    display: flex;
+    justify-content: center;
+    padding-top: 40vh;
+    color: #616161;
+    font-size: 22px;
+}

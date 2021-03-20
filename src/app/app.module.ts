@@ -66,6 +66,7 @@ import { AdvancedInfoComponent } from './components/advanced-info/advanced-info.
 import { ListNumbersDirective } from './directives/list-numbers.directive';
 import { ListChartComponent } from './components/user-charts/list-chart/list-chart.component';
 import { PieChartComponent } from './components/user-charts/pie-chart/pie-chart.component';
+import { RadarChartComponent } from './components/user-charts/radar-chart/radar-chart.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { PieChartComponent } from './components/user-charts/pie-chart/pie-chart.
     AdvancedInfoComponent,
     ListNumbersDirective,
     ListChartComponent,
-    PieChartComponent
+    PieChartComponent,
+    RadarChartComponent
   ],
   exports: [
     A11yModule,
