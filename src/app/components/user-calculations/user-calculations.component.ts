@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { User } from 'src/app/interfaces/user';
+import { UserService } from 'src/app/services/user.service';
 
 const EMPTY_MESSAGE: string = "n/a";
 
@@ -9,13 +11,22 @@ const EMPTY_MESSAGE: string = "n/a";
 })
 export class UserCalculationsComponent implements OnInit {
   @Input() z: any;
-  constructor() { }
+  constructor(private userService: UserService) { }
+
+  ngOnInit(): void {
+    this.getUsers();
+  }
+
+  users: User[] = [];
+  message: string = "User report is empty. You can add some users...";
+
+  getUsers(): void {
+    this.userService.getUsers()
+      .subscribe(users => this.users = users);
+  }
 
   isUserSlideToggleOn: boolean = false;
   isTotalsSlideToggleOn: boolean = false;
-
-  ngOnInit(): void {
-  }
 
   get totalRisks() {
     let a = this.z.map(x => x.risk).reduce((a, b) => a + b, 0);

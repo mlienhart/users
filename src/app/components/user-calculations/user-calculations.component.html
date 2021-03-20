@@ -1,43 +1,49 @@
-<mat-card>
-    <div class="b">
-        <span class="a">USER REPORT</span>
-    </div>
-    <mat-slide-toggle color="primary" [(ngModel)]="isUserSlideToggleOn">
-        <div *ngIf="!isUserSlideToggleOn">Show more</div>
-        <div *ngIf="isUserSlideToggleOn">Show less</div>
-    </mat-slide-toggle>
-    <mat-list>
-        <mat-list-item>user name with highest risk: {{ userNameWithHighestRisk }}</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>user name with lowest risk: {{ userNameWithLowestRisk }}</mat-list-item>
-        <mat-divider></mat-divider>
-        <div *ngIf="isUserSlideToggleOn">
-            <mat-list-item>available users: {{ availableUsers }}</mat-list-item>
-            <mat-divider></mat-divider>
-        </div>
-    </mat-list>
-</mat-card>
+<div class="x" *ngIf="this.users.length === 0">
+    {{ message }}
+  </div>
 
-<mat-card>
-    <div class="b">
-        <span class="a">TOTALS REPORT</span>
-    </div>
-    <mat-slide-toggle color="primary" [(ngModel)]="isTotalsSlideToggleOn">
-        <div *ngIf="!isTotalsSlideToggleOn">Show more</div>
-        <div *ngIf="isTotalsSlideToggleOn">Show less</div>
-    </mat-slide-toggle>
-    <mat-list>
-        <mat-list-item>total risks: {{ totalRisks }}</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item>total points: {{ totalPoints }}</mat-list-item>
-        <mat-divider></mat-divider>
-        <div *ngIf="isTotalsSlideToggleOn">
-            <mat-list-item>total successful login attempts: {{ totalSuccessfulLoginAttempts }}</mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>total failed login attempts: {{ totalFailedLoginAttempts }}</mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item>total references: {{ totalUserReferences }}</mat-list-item>
-            <mat-divider></mat-divider>
+<div *ngIf="this.users.length !== 0">
+    <mat-card>
+        <div class="b">
+            <span class="a">USER REPORT</span>
         </div>
-    </mat-list>
-</mat-card>
+        <mat-slide-toggle color="primary" [(ngModel)]="isUserSlideToggleOn">
+            <div *ngIf="!isUserSlideToggleOn">Show more</div>
+            <div *ngIf="isUserSlideToggleOn">Show less</div>
+        </mat-slide-toggle>
+        <mat-list>
+            <mat-list-item>user name with highest risk: {{ userNameWithHighestRisk }}</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>user name with lowest risk: {{ userNameWithLowestRisk }}</mat-list-item>
+            <mat-divider></mat-divider>
+            <div *ngIf="isUserSlideToggleOn">
+                <mat-list-item>available users: {{ availableUsers }}</mat-list-item>
+                <mat-divider></mat-divider>
+            </div>
+        </mat-list>
+    </mat-card>
+    
+    <mat-card>
+        <div class="b">
+            <span class="a">TOTALS REPORT</span>
+        </div>
+        <mat-slide-toggle color="primary" [(ngModel)]="isTotalsSlideToggleOn">
+            <div *ngIf="!isTotalsSlideToggleOn">Show more</div>
+            <div *ngIf="isTotalsSlideToggleOn">Show less</div>
+        </mat-slide-toggle>
+        <mat-list>
+            <mat-list-item>total risks: {{ totalRisks }}</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>total points: {{ totalPoints }}</mat-list-item>
+            <mat-divider></mat-divider>
+            <div *ngIf="isTotalsSlideToggleOn">
+                <mat-list-item>total successful login attempts: {{ totalSuccessfulLoginAttempts }}</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>total failed login attempts: {{ totalFailedLoginAttempts }}</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>total references: {{ totalUserReferences }}</mat-list-item>
+                <mat-divider></mat-divider>
+            </div>
+        </mat-list>
+    </mat-card>
+</div>

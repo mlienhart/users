@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from "chart.js";
 import { Label } from "ng2-charts";
+import { User } from 'src/app/interfaces/user';
+import { UserService } from 'src/app/services/user.service';
 import { USERS } from 'src/app/USERS';
 
 @Component({
@@ -10,9 +12,18 @@ import { USERS } from 'src/app/USERS';
 })
 export class BarChartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.getUsers();
+  }
+
+  users: User[] = [];
+  message: string = "User bar chart is empty. You can add some users...";
+
+  getUsers(): void {
+    this.userService.getUsers()
+      .subscribe(users => this.users = users);
   }
 
   public barChartOptions: ChartOptions = {

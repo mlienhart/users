@@ -1,10 +1,9 @@
-<div class="a" style="display: block;">
-    <canvas baseChart 
-      [datasets]="barChartData"
-      [labels]="barChartLabels"
-      [options]="barChartOptions"
-      [plugins]="barChartPlugins"
-      [legend]="barChartLegend"
-      [chartType]="barChartType">
-    </canvas>
-  </div>
+<div class="x" *ngIf="this.users.length === 0">
+  {{ message }}
+</div>
+
+<div *ngIf="this.users.length !== 0" class="a" style="display: block;">
+  <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+    [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+  </canvas>
+</div>
