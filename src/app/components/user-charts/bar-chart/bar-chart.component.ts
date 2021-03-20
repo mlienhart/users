@@ -36,7 +36,6 @@ export class BarChartComponent implements OnInit {
   public barChartPlugins = [];
 
   public barChartData: ChartDataSets[] = [
-    { data: USERS.map(x => x.references), label: "user references" },
     { data: USERS.map(x => x.risk), label: "user risk" },
     { data: USERS.map(x => x.successfulLoginAttempts), label: "successful login attempts" },
     { data: USERS.map(x => x.failedLoginAttempts), label: "failed login attempts" }
