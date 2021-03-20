@@ -8,6 +8,8 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UserReportComponent } from './components/user-report/user-report.component';
 import { UserTableComponent } from './components/user-table/user-table.component';
 import { UserTestComponent } from './components/user-test/user-test.component';
+import { ListChartComponent } from './components/user-charts/list-chart/list-chart.component';
+import { PieChartComponent } from './components/user-charts/pie-chart/pie-chart.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'app-start-page' },
@@ -19,7 +21,9 @@ const routes: Routes = [
       { path: 'app-user-table', component: UserTableComponent },
       { path: 'app-user-test', component: UserTestComponent },
       { path: 'app-line-chart', component: LineChartComponent },
-      { path: 'app-bar-chart', component: BarChartComponent }
+      { path: 'app-bar-chart', component: BarChartComponent },
+      { path: 'app-pie-chart', component: PieChartComponent },
+      { path: 'app-list-chart', component: ListChartComponent }
     ]
   },
   { path: '**', component: NotFoundComponent }

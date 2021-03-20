@@ -64,6 +64,8 @@ import { BarChartComponent } from './components/user-charts/bar-chart/bar-chart.
 import { MatTableExporterModule } from 'mat-table-exporter';
 import { AdvancedInfoComponent } from './components/advanced-info/advanced-info.component';
 import { ListNumbersDirective } from './directives/list-numbers.directive';
+import { ListChartComponent } from './components/user-charts/list-chart/list-chart.component';
+import { PieChartComponent } from './components/user-charts/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +83,9 @@ import { ListNumbersDirective } from './directives/list-numbers.directive';
     LineChartComponent,
     BarChartComponent,
     AdvancedInfoComponent,
-    ListNumbersDirective
+    ListNumbersDirective,
+    ListChartComponent,
+    PieChartComponent
   ],
   exports: [
     A11yModule,
