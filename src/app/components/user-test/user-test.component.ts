@@ -16,6 +16,7 @@ export class UserTestComponent implements OnInit {
   }
 
   users: User[] = [];
+  message: string = "User test is empty. You can add some users...";
 
   getUsers(): void {
     this.userService.getUsers()

@@ -27,6 +27,7 @@ export class UserTableComponent implements AfterViewInit {
 
   dataSource: MatTableDataSource<User>;
   displayedColumns: string[] = ['id', 'name', 'birthday', 'sex', 'risk', 'card', 'registered', 'points'];
+  message: string = "User table is empty. You can add some users...";
   users: User[] = [];
   expandedElement: any;
   title = 'export';
