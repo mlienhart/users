@@ -67,4 +67,14 @@ export class UserCalculationsComponent implements OnInit {
     return a === 0 ? EMPTY_MESSAGE : a;
   }
 
+  get badgeIdOfHighestRisk() {
+    let a = this.z.map(x => ({ name: x.name, risk: x.risk, id: x.id })).sort((a, b) => a.risk > b.risk ? -1 : 1);
+    return a.length > 0 ? a[0]?.id : EMPTY_MESSAGE;
+  }
+
+  get badgeIdOfLowestRisk() {
+    let a = this.z.map(x => ({ name: x.name, risk: x.risk, id: x.id })).sort((a, b) => a.risk < b.risk ? -1 : 1);
+    return a.length > 0 ? a[0]?.id : EMPTY_MESSAGE;
+  }
+
 }

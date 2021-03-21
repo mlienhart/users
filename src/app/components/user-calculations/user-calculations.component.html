@@ -1,6 +1,6 @@
 <div class="x" *ngIf="this.users.length === 0">
     {{ message }}
-  </div>
+</div>
 
 <div *ngIf="this.users.length !== 0">
     <mat-card>
@@ -12,9 +12,17 @@
             <div *ngIf="isUserSlideToggleOn">Show less</div>
         </mat-slide-toggle>
         <mat-list>
-            <mat-list-item>user name with highest risk: {{ userNameWithHighestRisk }}</mat-list-item>
+            <mat-list-item>user name with highest risk:
+                <span class="c" matBadge="{{ badgeIdOfHighestRisk }}" matBadgeOverlap="false">
+                    <span class="c">{{ userNameWithHighestRisk }}</span>
+                </span>
+            </mat-list-item>
             <mat-divider></mat-divider>
-            <mat-list-item>user name with lowest risk: {{ userNameWithLowestRisk }}</mat-list-item>
+            <mat-list-item>user name with lowest risk:
+                <span matBadge="{{ badgeIdOfLowestRisk }}" matBadgeOverlap="false">
+                    <span class="c">{{ userNameWithLowestRisk }}</span>
+                </span>
+            </mat-list-item>
             <mat-divider></mat-divider>
             <div *ngIf="isUserSlideToggleOn">
                 <mat-list-item>available users: {{ availableUsers }}</mat-list-item>
@@ -22,7 +30,7 @@
             </div>
         </mat-list>
     </mat-card>
-    
+
     <mat-card>
         <div class="b">
             <span class="a">TOTALS REPORT</span>

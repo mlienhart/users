@@ -14,6 +14,10 @@ mat-card {
     margin-bottom: 13px;
 }
 
+.c {
+    margin-left: 3px;
+}
+
 .x {
     display: flex;
     justify-content: center;
