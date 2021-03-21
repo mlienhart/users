@@ -5,11 +5,13 @@
     <mat-button-toggle (click)="sortRisksDescending()">sort risks descending</mat-button-toggle>
 </mat-button-toggle-group>
 
-<mat-selection-list [multiple]="false">
-    <mat-list-option *ngFor="let user of users" (click)="onUserSelect(user)">
-        <app-user-info (onUserDelete)="deleteUserFromList($event)" [x]="user"></app-user-info>
-    </mat-list-option>
-</mat-selection-list>
+<mat-card>
+    <mat-selection-list [multiple]="false">
+        <mat-list-option *ngFor="let user of users" (click)="onUserSelect(user)">
+            <app-user-info (onUserDelete)="deleteUserFromList($event)" [x]="user"></app-user-info>
+        </mat-list-option>
+    </mat-selection-list>
+</mat-card>
 
 <div class="a" *ngIf="this.users.length === 0">
     {{ message }}

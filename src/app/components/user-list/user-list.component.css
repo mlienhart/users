@@ -1,6 +1,6 @@
 button {
     cursor: pointer;
-    margin: 8px;
+    margin: 10px;
 }
 
 .a {
@@ -9,4 +9,12 @@ button {
     padding-top: 40vh;
     color: #616161;
     font-size: 22px;
+}
+
+mat-card {
+    margin: 10px;
+}
+
+mat-button-toggle-group {
+    margin: 10px;
 }
