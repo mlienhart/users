@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../interfaces/user';
 import { UserService } from '../../services/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-user-list',
@@ -9,7 +10,8 @@ import { UserService } from '../../services/user.service';
 })
 export class UserListComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,
+    private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.getUsers();
@@ -18,6 +20,7 @@ export class UserListComponent implements OnInit {
   users: User[] = [];
   message: string = "User list is empty. You can add some users...";
   selectedUser: any;
+  durationInSeconds = 5;
 
   getUsers(): void {
     this.userService.getUsers()
@@ -25,6 +28,9 @@ export class UserListComponent implements OnInit {
   }
 
   addUser() {
+    this._snackBar.openFromComponent(Snack, {
+      duration: this.durationInSeconds * 1000,
+    });
     return this.users.push(
       { id: this.users.length + 1, name: 'Jennifer', birthday: '1964-02-26T17:17:53Z', sex: 'female', risk: 20, card: 2, registered: true, points: [1, 2, 3], references: 2, failedLoginAttempts: 2, successfulLoginAttempts: 16 },
     );
@@ -56,3 +62,14 @@ export class UserListComponent implements OnInit {
   }
 
 }
+
+@Component({
+  selector: 'snack',
+  templateUrl: 'snack.html',
+  styles: [`
+    .snack {
+      color: hotpink;
+    }
+  `],
+})
+export class Snack { }
