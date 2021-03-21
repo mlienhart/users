@@ -17,6 +17,7 @@ export class UserListComponent implements OnInit {
 
   users: User[] = [];
   message: string = "User list is empty. You can add some users...";
+  selectedUser: any;
 
   getUsers(): void {
     this.userService.getUsers()
@@ -33,8 +34,6 @@ export class UserListComponent implements OnInit {
     let i = this.users.findIndex(x => { return x.id === a });
     return this.users.splice(i, 1);
   }
-
-  selectedUser: any;
 
   onUserSelect(value: any): void {
     this.selectedUser = value;
