@@ -20,7 +20,7 @@ export class UserListComponent implements OnInit {
   users: User[] = [];
   message: string = "User list is empty. You can add some users...";
   selectedUser: any;
-  durationInSeconds = 5;
+  durationInSeconds = 2;
 
   getUsers(): void {
     this.userService.getUsers()
@@ -28,7 +28,7 @@ export class UserListComponent implements OnInit {
   }
 
   addUser() {
-    this._snackBar.openFromComponent(Snack, {
+    this._snackBar.openFromComponent(SnackForAddButton, {
       duration: this.durationInSeconds * 1000,
     });
     return this.users.push(
@@ -37,6 +37,9 @@ export class UserListComponent implements OnInit {
   }
 
   deleteUserFromList(a: number) {
+    this._snackBar.openFromComponent(SnackForDeleteButton, {
+      duration: this.durationInSeconds * 1000,
+    });
     let i = this.users.findIndex(x => { return x.id === a });
     return this.users.splice(i, 1);
   }
@@ -64,12 +67,23 @@ export class UserListComponent implements OnInit {
 }
 
 @Component({
-  selector: 'snack',
-  templateUrl: 'snack.html',
+  selector: 'snackForAddButton',
+  templateUrl: 'snackForAddButton.html',
   styles: [`
-    .snack {
+    .snackForAddButton {
       color: hotpink;
     }
   `],
 })
-export class Snack { }
+export class SnackForAddButton { }
+
+@Component({
+  selector: 'snackForDeleteButton',
+  templateUrl: 'snackForDeleteButton.html',
+  styles: [`
+    .snackForDeleteButton {
+      color: hotpink;
+    }
+  `],
+})
+export class SnackForDeleteButton { }
