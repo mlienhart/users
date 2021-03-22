@@ -67,3 +67,7 @@ button {
   color: #616161;
   font-size: 22px;
 }
+
+mat-card {
+  margin: 10px;
+}
