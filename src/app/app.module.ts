@@ -67,6 +67,7 @@ import { ListNumbersDirective } from './directives/list-numbers.directive';
 import { ListChartComponent } from './components/user-charts/list-chart/list-chart.component';
 import { PieChartComponent } from './components/user-charts/pie-chart/pie-chart.component';
 import { RadarChartComponent } from './components/user-charts/radar-chart/radar-chart.component';
+import { UserFilterBarComponent } from './components/user-filter-bar/user-filter-bar.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,8 @@ import { RadarChartComponent } from './components/user-charts/radar-chart/radar-
     ListNumbersDirective,
     ListChartComponent,
     PieChartComponent,
-    RadarChartComponent
+    RadarChartComponent,
+    UserFilterBarComponent
   ],
   exports: [
     A11yModule,

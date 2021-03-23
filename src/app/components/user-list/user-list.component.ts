@@ -47,23 +47,6 @@ export class UserListComponent implements OnInit {
   onUserSelect(value: any): void {
     this.selectedUser = value;
   }
-
-  sortUsersByNameAscending() {
-    return this.users.sort((a, b) => a.name < b.name ? -1 : 1);
-  }
-
-  sortUsersByNameDescending() {
-    return this.users.sort((a, b) => a.name > b.name ? -1 : 1);
-  }
-
-  sortRisksAscending() {
-    return this.users.sort((a, b) => a.risk < b.risk ? -1 : 1);
-  }
-
-  sortRisksDescending() {
-    return this.users.sort((a, b) => a.risk > b.risk ? -1 : 1);
-  }
-
 }
 
 @Component({

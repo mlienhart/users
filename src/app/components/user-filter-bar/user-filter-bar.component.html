@@ -1,0 +1,8 @@
+<mat-card>
+    <mat-button-toggle-group *ngIf="this.users.length > 1" name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle (click)="sortUsersByNameAscending()">sort names ascending</mat-button-toggle>
+        <mat-button-toggle (click)="sortUsersByNameDescending()">sort names descending</mat-button-toggle>
+        <mat-button-toggle (click)="sortRisksAscending()">sort risks ascending</mat-button-toggle>
+        <mat-button-toggle (click)="sortRisksDescending()">sort risks descending</mat-button-toggle>
+    </mat-button-toggle-group>
+</mat-card>
