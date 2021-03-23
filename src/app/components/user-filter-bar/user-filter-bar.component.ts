@@ -40,4 +40,12 @@ export class UserFilterBarComponent implements OnInit {
     return this.users.sort((a, b) => a.risk > b.risk ? -1 : 1);
   }
 
+  sortIdsAscending() {
+    return this.users.sort((a, b) => a.id < b.id ? -1 : 1);
+  }
+
+  sortIdsDescending() {
+    return this.users.sort((a, b) => a.id > b.id ? -1 : 1);
+  }
+
 }
