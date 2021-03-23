@@ -17,6 +17,7 @@ export class UserFilterBarComponent implements OnInit {
   }
 
   users: User[] = [];
+  isFilterBarSlideToggleOn: boolean = false;
 
   getUsers(): void {
     this.userService.getUsers()
