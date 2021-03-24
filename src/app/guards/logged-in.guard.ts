@@ -12,11 +12,8 @@ export class LoggedInGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    if (localStorage['logged'] == 'true') {
-      return true;
-    } else {
-      this.router.navigate(['/noaccess']);
-    }
+    return (localStorage["loggedIn"] === "true") ? true : this.router.navigate(['/app-access-denied']);
+
   }
 
 }

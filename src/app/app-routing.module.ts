@@ -17,7 +17,7 @@ import { LoggedInGuard } from './guards/logged-in.guard';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'app-start-page' },
   { path: 'app-start-page', component: StartPageComponent },
-  { path: 'noaccess', component: AccessDeniedComponent },
+  { path: 'app-access-denied', component: AccessDeniedComponent },
   {
     path: 'routing', canActivate: [LoggedInGuard], children: [
       { path: 'app-user-list', component: UserListComponent },
