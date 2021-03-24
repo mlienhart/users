@@ -11,12 +11,15 @@ import { UserTestComponent } from './components/user-test/user-test.component';
 import { ListChartComponent } from './components/user-charts/list-chart/list-chart.component';
 import { PieChartComponent } from './components/user-charts/pie-chart/pie-chart.component';
 import { RadarChartComponent } from './components/user-charts/radar-chart/radar-chart.component';
+import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
+import { LoggedInGuard } from './guards/logged-in.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'app-start-page' },
   { path: 'app-start-page', component: StartPageComponent },
+  { path: 'noaccess', component: AccessDeniedComponent },
   {
-    path: 'routing', children: [
+    path: 'routing', canActivate: [LoggedInGuard], children: [
       { path: 'app-user-list', component: UserListComponent },
       { path: 'app-user-report', component: UserReportComponent },
       { path: 'app-user-table', component: UserTableComponent },

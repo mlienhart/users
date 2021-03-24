@@ -68,6 +68,8 @@ import { ListChartComponent } from './components/user-charts/list-chart/list-cha
 import { PieChartComponent } from './components/user-charts/pie-chart/pie-chart.component';
 import { RadarChartComponent } from './components/user-charts/radar-chart/radar-chart.component';
 import { UserFilterBarComponent } from './components/user-filter-bar/user-filter-bar.component';
+import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
+import { LoggedInGuard } from './guards/logged-in.guard';
 
 @NgModule({
   declarations: [
@@ -89,7 +91,8 @@ import { UserFilterBarComponent } from './components/user-filter-bar/user-filter
     ListChartComponent,
     PieChartComponent,
     RadarChartComponent,
-    UserFilterBarComponent
+    UserFilterBarComponent,
+    AccessDeniedComponent
   ],
   exports: [
     A11yModule,
@@ -189,7 +192,7 @@ import { UserFilterBarComponent } from './components/user-filter-bar/user-filter
     ChartsModule,
     MatTableExporterModule
   ],
-  providers: [],
+  providers: [LoggedInGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
