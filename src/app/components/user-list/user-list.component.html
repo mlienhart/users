@@ -1,7 +1,7 @@
 <app-user-filter-bar></app-user-filter-bar>
 
 <mat-card *ngIf="this.users.length !== 0">
-    <mat-selection-list [multiple]="false">
+    <mat-selection-list  class="custom-scrollbar" [multiple]="false">
         <mat-list-option *ngFor="let user of users" (click)="onUserSelect(user)">
             <app-user-info (onUserDelete)="deleteUserFromList($event)" [x]="user"></app-user-info>
         </mat-list-option>
