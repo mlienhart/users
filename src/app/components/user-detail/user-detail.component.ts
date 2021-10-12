@@ -38,4 +38,8 @@ export class UserDetailComponent implements OnInit {
     return Card[this.y.card].toLocaleLowerCase();
   }
 
+  onOpenUserInfoInNewTab() {
+    window.open("http://localhost:4200/#/routing/app-user-data");
+  }
+
 }

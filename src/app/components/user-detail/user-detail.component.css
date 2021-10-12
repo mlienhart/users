@@ -1,31 +1,36 @@
 mat-card {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 input {
-    max-width: 150px;
+  max-width: 150px;
 }
 
 .column {
-    float: left;
-    width: 14%;
-    padding: 10px;
+  float: left;
+  width: 14%;
+  padding: 10px;
 }
 
 .a {
-    color: rgba(0,0,0,.54);
-    margin-left: 6px;
+  color: rgba(0, 0, 0, 0.54);
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.a:hover {
+  text-decoration: underline;
 }
 
 .b {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 13px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 13px;
 }
 
 mat-divider {
-    margin-top: 38px;
+  margin-top: 38px;
 }

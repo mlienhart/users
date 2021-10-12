@@ -3,7 +3,7 @@
         <span class="material-icons">
             account_circle
         </span>
-        <span class="a">{{ userTitle }}</span>
+        <span (click)="onOpenUserInfoInNewTab()" class="a">{{ userTitle }}</span>
     </div>
     <mat-divider></mat-divider>
     <mat-tab-group mat-align-tabs="start" animationDuration="0ms">
