@@ -70,7 +70,6 @@ import { RadarChartComponent } from './components/user-charts/radar-chart/radar-
 import { UserFilterBarComponent } from './components/user-filter-bar/user-filter-bar.component';
 import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
 import { LoggedInGuard } from './guards/logged-in.guard';
-import { UserDataComponent } from './components/user-data/user-data.component';
 
 @NgModule({
   declarations: [
@@ -93,8 +92,7 @@ import { UserDataComponent } from './components/user-data/user-data.component';
     PieChartComponent,
     RadarChartComponent,
     UserFilterBarComponent,
-    AccessDeniedComponent,
-    UserDataComponent
+    AccessDeniedComponent
   ],
   exports: [
     A11yModule,

@@ -13,7 +13,6 @@ import { PieChartComponent } from './components/user-charts/pie-chart/pie-chart.
 import { RadarChartComponent } from './components/user-charts/radar-chart/radar-chart.component';
 import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
 import { LoggedInGuard } from './guards/logged-in.guard';
-import { UserDataComponent } from './components/user-data/user-data.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'app-start-page' },
@@ -25,7 +24,6 @@ const routes: Routes = [
       { path: 'app-user-report', component: UserReportComponent },
       { path: 'app-user-table', component: UserTableComponent },
       { path: 'app-user-test', component: UserTestComponent },
-      { path: 'app-user-data', component: UserDataComponent },
       { path: 'app-line-chart', component: LineChartComponent },
       { path: 'app-bar-chart', component: BarChartComponent },
       { path: 'app-pie-chart', component: PieChartComponent },
