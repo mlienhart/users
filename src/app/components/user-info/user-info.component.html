@@ -1,5 +1,5 @@
 <div class="y">
-    id: {{ x.id }}, name: {{ x.name }}, card: {{ cardName() }}, risk: {{ riskValue }}
+    ID: {{ x.id }}, NAME: {{ x.name }}, CARD: {{ cardName() }}
     <mat-progress-bar [class]="getRiskColorClass(x.risk)" mode="determinate" max="100" value="{{ x.risk }}"
         matTooltip="risk: {{ riskValue }}"></mat-progress-bar>
     <mat-checkbox color="primary" [(ngModel)]="x.registered" [disabled]="false">Registered</mat-checkbox>

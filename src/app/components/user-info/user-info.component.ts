@@ -21,7 +21,8 @@ export class UserInfoComponent implements OnInit {
   }
 
   cardName() {
-    return Card[this.x.card].toLocaleLowerCase();
+    let card = Card[this.x.card].toLocaleLowerCase()
+    return card.charAt(0).toUpperCase() + card.slice(1);
   }
 
   get riskValue() {
